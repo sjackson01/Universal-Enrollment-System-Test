@@ -7,7 +7,11 @@ namespace UES
     class Connection
     {
 
-        public readonly string DataSource;
+        private string _dataSource;
+        public string DataSource { 
+            get { return _dataSource; }
+            set { _dataSource = value; }
+        }
 
         public Connection(string dataSource)
         { 
