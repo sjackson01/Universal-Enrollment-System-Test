@@ -1,0 +1,13 @@
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\UES.exe
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\obj\Debug\netcoreapp3.1\UES.csprojAssemblyReference.cache
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\obj\Debug\netcoreapp3.1\UES.AssemblyInfoInputs.cache
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\obj\Debug\netcoreapp3.1\UES.AssemblyInfo.cs
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\UES.deps.json
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\UES.runtimeconfig.json
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\UES.runtimeconfig.dev.json
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\UES.dll
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\UES.pdb
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\obj\Debug\netcoreapp3.1\UES.csproj.CopyComplete
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\obj\Debug\netcoreapp3.1\UES.dll
+C:\Users\jackson7\Desktop\Repos\LSU Projects\UES\UES\obj\Debug\netcoreapp3.1\UES.pdb
