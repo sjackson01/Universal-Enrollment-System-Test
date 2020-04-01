@@ -10,9 +10,12 @@ namespace UES
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
+            // Obtain URI from Config.json 
+            DataSource dataSource = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+
             // Connect to data source
-            Connection JsonLink = new Connection("https://jsonplaceholder.typicode.com/todos/1");
+            Connection JsonLink = new Connection(dataSource.Uri);
             string json = JsonLink.GetData(JsonLink.DataSource);
             
             // Convert into JSON object 
