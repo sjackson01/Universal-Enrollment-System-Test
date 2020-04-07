@@ -11,15 +11,20 @@ namespace UES
     {
         static void Main(string[] args)
         {
+            // Test Connection 
+            MoodleConnection db = new MoodleConnection("localhost:8080", "Test", "root", "tiger");
+            Console.WriteLine(db.OpenConnection());
+
             // Obtain URI from Config.json 
             DataSource dataSource = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
 
             // Connect to data source
-            Connection JsonLink = new Connection(dataSource.Uri);
-            string json = JsonLink.GetData(JsonLink.DataSource);
+            GetData JsonLink = new GetData(dataSource.Uri);
+            string json = JsonLink.Get(JsonLink.DataSource);
             
             // Convert into JSON object 
             var jo = JObject.Parse(json);
+            
 
             Console.WriteLine(json);
 

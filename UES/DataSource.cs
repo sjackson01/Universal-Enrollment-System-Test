@@ -14,6 +14,7 @@ namespace UES
     class DataSource
     {
         public string Uri { get; set; }
+        public string DAO { get; set; }
 
     }
 }

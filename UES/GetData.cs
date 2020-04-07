@@ -4,7 +4,7 @@ using System.IO;
 
 namespace UES
 {
-    class Connection
+    class GetData
     {
 
         private string _dataSource;
@@ -13,12 +13,12 @@ namespace UES
             set { _dataSource = value; }
         }
 
-        public Connection(string dataSource)
+        public GetData(string dataSource)
         { 
             DataSource = dataSource;
         }
 
-        public string GetData(string dataSource) 
+        public string Get(string dataSource) 
         {
             WebRequest request = WebRequest.Create(dataSource);
             WebResponse response = (WebResponse)request.GetResponse();
