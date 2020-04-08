@@ -12,7 +12,7 @@ namespace UES
         static void Main(string[] args)
         {
             // Test Connection 
-            MoodleConnection db = new MoodleConnection("localhost:8080", "Test", "root", "tiger");
+            MoodleConnection db = new MoodleConnection("localhost", "Test", "root", "tiger");
             Console.WriteLine(db.OpenConnection());
 
             // Obtain URI from Config.json 
