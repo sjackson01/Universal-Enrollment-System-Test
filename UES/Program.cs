@@ -11,34 +11,20 @@ namespace UES
     {
         static void Main(string[] args)
         {
+            // Test Connection 
+            MoodleConnection db = new MoodleConnection("localhost", "Test", "root", "tiger");
+            Console.WriteLine(db.OpenConnection());
 
-            // JSON location 
-            // Place in the xml config file 
-            string apiUri = "https://jsonplaceholder.typicode.com/todos/1";
+            // Obtain URI from Config.json 
+            DataSource dataSource = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
 
-            // Send web service request
-            // Original Code: HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiUri);
-            WebRequest request = WebRequest.Create(apiUri);
-
-            // Get response
-            // Originial Code: HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            WebResponse response = (WebResponse)request.GetResponse();
-
-            // Create stream
-            Stream responseStream = response.GetResponseStream();
-
-            // Set up the stream reader
-            // Talk to Jeff about encoding 
-            StreamReader readerStream = new StreamReader(responseStream, System.Text.Encoding.GetEncoding("utf-8"));
-
-            // Transfer to a string 
-            string json = readerStream.ReadToEnd();
-
-            // Close the stream
-            readerStream.Close();
-
+            // Connect to data source
+            GetData JsonLink = new GetData(dataSource.Uri);
+            string json = JsonLink.Get(JsonLink.DataSource);
+            
             // Convert into JSON object 
             var jo = JObject.Parse(json);
+            
 
             Console.WriteLine(json);
 
