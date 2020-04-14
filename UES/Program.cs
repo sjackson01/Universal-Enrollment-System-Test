@@ -12,15 +12,32 @@ namespace UES
         static void Main(string[] args)
         {
             // Test Connection 
-            MoodleConnection db = new MoodleConnection("localhost", "Test", "root", "tiger");
-            Console.WriteLine(db.OpenConnection());
+            // MoodleConnection db = new MoodleConnection("localhost", "Test", "root", "tiger");
+            // Console.WriteLine(db.OpenConnection());
 
+            /*
             // Obtain URI from Config.json 
-            DataSource dataSource = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+            DataSource uri = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+            // Obtain UserName from Config.json
+            DataSource username = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+            // Obtain Password from Config.json
+            DataSource password = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+            */
 
             // Connect to data source
-            GetData JsonLink = new GetData(dataSource.Uri);
-            string json = JsonLink.Get(JsonLink.DataSource);
+            BoomiConnection connection = new BoomiConnection("http://boomidev01.lsu.edu/ws/rest/srr/courselist/", "moodle@lsuuis-2RZOV4", "134d5290-ee2a-47f1-ba4b-3ca283d42cbc");
+
+            var rawData = connection.RetrieveCourses();
+
+            Console.WriteLine(rawData.ToString());
+            /*
+            var rawJason = connection.Get();
+
+            Console.WriteLine(rawJason);
+            */
+            /*
+            // Convert Rest Api Json 
+            string json = JsonLink.Get();
             
             // Convert into JSON object 
             var jo = JObject.Parse(json);
@@ -65,8 +82,7 @@ namespace UES
                 Console.WriteLine(completed);
 
             }
-
-
+           */
 
 
         }
