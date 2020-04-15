@@ -10,12 +10,54 @@ using Newtonsoft.Json.Linq;
 //on obj instantiation check no config file issues
 
 namespace UES
-{
-    class DataSource
     {
-        public string Uri { get; set; }
-        public string DAO { get; set; }
+        class DataSource
+        {
+            private string _uri;
+            private string _userName;
+            private string _password;
 
+            public string Uri
+            {
+                get { return _uri; }
+                set { _uri = value; }
+            }
+
+            public string UserName
+            {
+                get { return _userName; }
+                set { _userName = value; }
+            }
+
+            public string Password
+            {
+                get { return _password; }
+                set { _password = value; }
+            }
+
+            // Obtain URI from Config.json 
+            public string GetUri()
+            {
+                DataSource uri = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+                return uri.Uri;
+            }
+
+            // Obtain UserName from Config.json
+            public string GetUserName()
+            {
+                DataSource username = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+                return username.UserName;
+            }
+
+            // Obtain Password from Config.json
+            public string GetPassword()
+            {
+                DataSource password = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
+                return password.Password;
+            }
+        }
     }
-}
+
+
+
 

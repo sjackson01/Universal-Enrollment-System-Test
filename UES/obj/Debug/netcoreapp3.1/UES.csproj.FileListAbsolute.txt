@@ -97,3 +97,5 @@ C:\Users\jackson7\Desktop\Repos\UES\UES\UES\obj\Debug\netcoreapp3.1\UES.csproj.C
 C:\Users\jackson7\Desktop\Repos\UES\UES\UES\obj\Debug\netcoreapp3.1\UES.dll
 C:\Users\jackson7\Desktop\Repos\UES\UES\UES\obj\Debug\netcoreapp3.1\UES.pdb
 C:\Users\jackson7\Desktop\Repos\UES\UES\UES\obj\Debug\netcoreapp3.1\UES.genruntimeconfig.cache
+C:\Users\jackson7\Desktop\Repos\UES\UES\UES\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\jackson7\Desktop\Repos\UES\UES\UES\obj\Debug\netcoreapp3.1\UES.csproj.CoreCompileInputs.cache

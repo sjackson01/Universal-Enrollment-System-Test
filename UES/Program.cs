@@ -15,21 +15,16 @@ namespace UES
             // MoodleConnection db = new MoodleConnection("localhost", "Test", "root", "tiger");
             // Console.WriteLine(db.OpenConnection());
 
-            /*
-            // Obtain URI from Config.json 
-            DataSource uri = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
-            // Obtain UserName from Config.json
-            DataSource username = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
-            // Obtain Password from Config.json
-            DataSource password = JsonConvert.DeserializeObject<DataSource>(File.ReadAllText("../../../Config.json"));
-            */
+            // Create credentials object to pass authentication details
+            DataSource credentials = new DataSource();
 
-            // Connect to data source
-            BoomiConnection connection = new BoomiConnection("http://boomidev01.lsu.edu/ws/rest/srr/courselist/", "moodle@lsuuis-2RZOV4", "134d5290-ee2a-47f1-ba4b-3ca283d42cbc");
+            // Connect to api 
+            BoomiConnection connection = new BoomiConnection(credentials.GetUri(), credentials.GetUserName(), credentials.GetPassword());
+            string json = connection.RetrieveCourses();
 
-            var rawData = connection.RetrieveCourses();
+            // Display Json
+            Console.WriteLine(json);
 
-            Console.WriteLine(rawData.ToString());
             /*
             var rawJason = connection.Get();
 
